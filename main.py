@@ -41,7 +41,7 @@ def handle_new_word(message):
 @bot.message_handler(["show_word"])
 def handle_show_word(message):
     words = message.text.split(" ")
-    if len(words) > 2:
+    if len(words) == 2:
         word = words[1]
         if str(message.chat.id) in all_words:
             id_dict = all_words[str(message.chat.id)]
